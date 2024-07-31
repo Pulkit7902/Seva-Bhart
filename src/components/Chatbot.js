@@ -12,6 +12,5 @@ const Chatbot = () => {
       document.head.appendChild(t);
     }, 0); // Add a delay of 0 milliseconds
   }
-
-  module.exports = Chatbot
+export default Chatbot
   
