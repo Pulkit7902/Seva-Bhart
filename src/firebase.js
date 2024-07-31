@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
 import { getFirestore, getDoc, doc, updateDoc, getDocs, collection, setDoc } from "firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider, signInWithEmailAndPassword, signOut,signInWithPopup } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider, signInWithEmailAndPassword, signOut,signInWithPopup ,OAuthProvider} from "firebase/auth";
 import { generatePassword, randomNumber } from './modules/random';
 
 const firebaseConfig = {
@@ -29,6 +29,7 @@ getAnalytics(app)
 const db = getFirestore();
 export const auth = getAuth()
 const provider = new GoogleAuthProvider();
+const appleProvider = new OAuthProvider('apple.com');
 
 export async function signupUser(email, password) {
     try {
@@ -234,6 +235,27 @@ export const signInWithGoogle = async () => {
         return { success: false, error: errorMessage };
     }
 };
+// src/firebase.js (continued)
+export const signInWithApple = async () => {
+    try {
+        const result = await signInWithPopup(auth, appleProvider);
+        const credential = OAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        const user = result.user;
+        // You can handle the user info here, e.g., saving it to your state or database
+        console.log(user);
+        return { success: true, user };
+    } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.email;
+        const credential = OAuthProvider.credentialFromError(error);
+        // Handle errors here
+        console.error(error);
+        return { success: false, error: errorMessage };
+    }
+};
+
 export async function setEvent(uid, title, description, image, url) {
     try {
         const ref = doc(db, `/ngos/${uid}`)
@@ -247,5 +269,7 @@ export async function setEvent(uid, title, description, image, url) {
         }
         return { success: false, error: 'Complete your profile first' }
     } catch { return { success: false, error: 'Some error occurred...' } }
+
+    
     
 }

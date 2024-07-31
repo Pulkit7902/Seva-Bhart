@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import login from "../images/Login.png";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { loginNgo, loginUser, signInWithGoogle } from "../firebase";
+import { loginNgo, loginUser, signInWithApple, signInWithGoogle } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import RegisterNavBar from "./RegisterNavBar";
 
@@ -42,7 +42,15 @@ const Login = ({ type }) => {
         toast.error("Some Error is Occurred Please Check your Credentials")
     }
 };
-
+const handleAppleSignIn = async () => {
+  const result = await signInWithApple();
+  if (result.success) {
+      console.log("User signed in:", result.user);
+      // Redirect or perform other actions after successful sign-in
+  } else {
+      console.error("Sign in error:", result.error);
+  }
+};
   return (
     <>
       <RegisterNavBar />
@@ -127,6 +135,7 @@ const Login = ({ type }) => {
             </Link>
 
           </p>
+          <p className="text-center">Or</p>
           <button
             
             className="font-semibold w-full my-2 mx-auto btn bg-gradient-to-r border rounded-lg px-4 py-2 m-2 hover:bg-blue-500"
@@ -137,7 +146,7 @@ const Login = ({ type }) => {
           <button
             
             className="font-semibold w-full my-2 mx-auto btn bg-gradient-to-r border rounded-lg  px-4 py-2 m-2 hover:bg-black hover:text-white"
-            onClick={handleGoogleSignIn}
+            onClick={handleAppleSignIn}
           >
             Login With Apple
           </button>
