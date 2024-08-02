@@ -25,10 +25,10 @@ export default function RegisterBannerLanding() {
                     </span>
                 </Link>
                 <Link
-                    to="/ngo/signup"><span
+                    to="/ngo/login"><span
                         className="font-semibold inline-block bg-gradient-to-r from-gradient1a to-gradient1b border rounded-lg px-4 py-2 m-2"
                     >
-                        Register as NGO
+                        Login As Ngo
                     </span>
                 </Link>
 

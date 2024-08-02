@@ -1,4 +1,7 @@
 const Chatbot = () => {
+  <div className="text-white">
+    hello
+  </div>
   window.watsonAssistantChatOptions = {
     integrationID: "8859cd7b-c22e-40a4-964c-5c1be9658ac1", // The ID of this integration.
     region: "us-south", // The region your integration is hosted in.

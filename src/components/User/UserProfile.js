@@ -47,6 +47,7 @@ export default function UserProfile() {
     if (!success) return toast.error("Some error occurred...");
     setUserDataUpdated(true);
     window.location.reload();
+    console.log("user issdsdsi->",user)
     // toast.success("Profile updated successfully!");
   }
 

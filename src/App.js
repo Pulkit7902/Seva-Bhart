@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import NavBarAllNgo from "./components/Ngo/AllNgo/NavBarAllNgo";
 import useAuth from "./hooks/useAuth";
 import UserProfile from "./components/User/UserProfile";
+import RegisterAsNgo from "./components/RegisterrAsNgo";
+import LoginAsNgo from "./components/LoginAsNgo";
 const Landing = lazy(() => import("./components/Landing"));
 const Navbar = lazy(() => import("./components/User/Navbar"));
 const Register = lazy(() => import("./components/Register"));
@@ -47,7 +49,9 @@ function App() {
           <Route path="/user/donate" element={<MakeDonations />} />
           <Route path="/user/money" element={<Money />} />
           <Route path="/ngo/signup" element={<Register type="Ngo" />} />
-          <Route path="/ngo/login" element={<Login type="Ngo" />} />
+          {/* <Route path="/ngo/signup" element={<RegisterAsNgo/>}/> */}
+          <Route path="/ngo/login" element={<LoginAsNgo type="Ngo" />} />
+
           <Route path="/ngo/dashboard" element={<Dashboard />} />
           <Route path="/ngo/profile" element={<Profile />} />
           <Route path="/ngo" element={<Posts />} />

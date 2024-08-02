@@ -22,6 +22,7 @@ const useAuth = () => {
                     setUser(uid)
                     setNgo(null)
                     console.log('User authenticated')
+                    console.log("user id is->",uid)
                 } else if (authType === 'ngo') {
                     setNgo(uid)
                     setUser(null)

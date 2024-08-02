@@ -28,7 +28,7 @@ export default function NavBarAllNgo() {
                         <Logo dimension={2} />
 
                         <p className="font-bold text-xl hidden xxsm:block">
-                            DoNation
+                            Seva Bharat
                         </p>
                     </div>
                 </Link>
