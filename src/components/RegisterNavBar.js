@@ -14,7 +14,16 @@ export default function RegisterNavBar() {
                     <div className="flex items-center gap-2 sm:gap-3 ">
 
                         <Logo dimension={2} />
-                        <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-t from-colorPrimary to-colorSecondary hidden xsm:block"> Seva Bharat</h1>
+                        <div className="flex gap-2 items-center justify-center">
+          <h1
+              className="text-4xl text-transparent bg-clip-text bg-gradient-to-t from-colorPrimary to-colorSecondary hidden lg:block"
+            >
+              Shukhrana
+            </h1>
+            <h1 className="text-3xl">
+              🙏
+            </h1>
+          </div>
                     </div>
                 </Link>
 

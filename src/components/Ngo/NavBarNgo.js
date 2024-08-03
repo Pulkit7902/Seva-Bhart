@@ -215,12 +215,16 @@ export default function NavBarNgo() {
         <Link to="/ngo">
           <div className="flex items-center gap-2 sm:gap-3 ">
             <Logo dimension={2} />
-
-            <h1
+            <div className="flex gap-2 items-center justify-center">
+          <h1
               className="text-4xl text-transparent bg-clip-text bg-gradient-to-t from-colorPrimary to-colorSecondary hidden lg:block"
             >
-             Seva Bharat
+              Shukhrana
             </h1>
+            <h1 className="text-3xl">
+              🙏
+            </h1>
+          </div>
           </div>
         </Link>
 
