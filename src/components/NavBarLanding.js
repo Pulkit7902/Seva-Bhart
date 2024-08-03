@@ -35,7 +35,7 @@ export default function NavBarLanding() {
             >
               Shukhrana
             </h1>
-            <h1 className="text-3xl">
+            <h1 className="text-3xl  lg:block">
               🙏
             </h1>
           </div>

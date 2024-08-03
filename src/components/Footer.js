@@ -19,9 +19,12 @@ const Footer = () => {
                     <div className='flex gap-2 sm:flex-col items-center sm:items-start'>
                         <div className='flex flex-col md:flex-row md:items-center md:gap-4 '>
                             < Logo dimension={4} />
-                            <p className='font-bold text-xl '>Shukhrana ❤️</p>
+                            <div className='flex gap-2 items-center justify-center'>
+                            <p className='font-bold text-xl '>Shukhrana </p>
+                            <p className='hidden lg:block'>❤️</p>
+                            </div>
                         </div>
-                        <p className='block text-justify'>Seva Bharat is an independent Not for Profit Organisation founded in 2024 by college students in order to do something valuable and good for the society. </p>
+                        <p className='block text-justify'>Shukrana is an independent Not for Profit Organisation founded in 2024 by college students in order to do something valuable and good for the society. </p>
                     </div>
                 </Link>
 
