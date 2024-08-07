@@ -100,7 +100,7 @@ export default function NavBarNgo() {
           <h1
               className="text-4xl text-transparent bg-clip-text bg-gradient-to-t from-colorPrimary to-colorSecondary hidden lg:block"
             >
-              Seva Bhart
+              Seva Bharat
             </h1>
            
           </div>
