@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
 import { getFirestore, getDoc, doc, updateDoc, getDocs, collection, setDoc } from "firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider, signInWithEmailAndPassword, signOut,signInWithPopup ,OAuthProvider} from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider, signInWithEmailAndPassword, sendEmailVerification, signOut,signInWithPopup ,OAuthProvider} from "firebase/auth";
 import { generatePassword, randomNumber } from './modules/random';
 
 const firebaseConfig = {
@@ -41,7 +41,8 @@ const appleProvider = new OAuthProvider('apple.com');
 export async function signupUser(email, password) {
     try {
         localStorage.setItem('auth-type', 'user')
-        await createUserWithEmailAndPassword(auth, email, password)
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+        await sendEmailVerification(userCredential.user);
         return { success: true }
     } catch (error) {
         localStorage.removeItem('auth-type')

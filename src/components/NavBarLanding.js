@@ -33,11 +33,9 @@ export default function NavBarLanding() {
           <h1
               className="text-4xl text-transparent bg-clip-text bg-gradient-to-t from-colorPrimary to-colorSecondary hidden lg:block"
             >
-              Shukhrana
+              Seva Bharat
             </h1>
-            <h1 className="text-3xl  lg:block">
-              🙏
-            </h1>
+            
           </div>
           </div>
         </Link>
