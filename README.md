@@ -1,4 +1,4 @@
-# DoNation - "Donate for a good cause"
+# Seva Bharat
 
 DoNation was developed with the intention of making it simple for anyone to contribute to the nation's quality and equal chances for children's well-being. Additionally, we want to raise awareness of the value of children's wellbeing. We experience empathy and compassion when we see children suffering, which motivates us to build a contribution platform and assist those kids who are in need.
 
@@ -12,9 +12,7 @@ To develop the frontend of our website, We utilized the framework ReactJS and co
 - Firebase
 - Vercel
 
-### Testing credentials
-**User Login**: Email : shivansharora@gmail.com   Password : vipul123 <br/>
-**NGO Login**: Email : vipul@gmail.com   Password : vipul123
+
 
 
 ### Challenges we ran into
@@ -26,4 +24,4 @@ We are incredibly proud of what we were able to achieve during the hackathon. De
 We gained some valuable experience and knowledge from the hackathon, learning to use new technologies that we had previously only had limited exposure to. Overcoming obstacles such as limited time and competing priorities taught us the importance of effective time management and the need to prioritize tasks.
 
 This experience has given us a great sense of accomplishment and has motivated us to continue exploring new technologies and improving our skills. The hackathon also provided us with an opportunity to connect with like-minded individuals and collaborate with others, which was a great learning experience in itself. Overall, we were thrilled with what we were 
-We came to the realization that there is always room for expansion and development when we thought back on our experience with this project. We'd like to completely deploy the delivery partners feature. Users would be able to communicate with one another, exchange concepts, and take part in conversations about how to educate kids. In addition, before delivering NGOs instructions, we would like to have them verified. In order to .
+We came to the realization that there is always room for expansion and development when we thought back on our experience with this project. We'd like to completely deploy the delivery partners feature. Users would be able to communicate with one another, exchange concepts, and take part in conversations about how to educate kids. In addition, before delivering NGOs instructions, we would like to have them verified.
